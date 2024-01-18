@@ -1,12 +1,47 @@
 #include "monty.h"
 
 /**
+ * ft_strcmp - compares two strings
+ * @s1: the first string
+ * @s2: the second string
+ * Return: the difference between the strings
+ */
+char	*ft_substr(char *s, unsigned int start, size_t len)
+{
+	char			*dst;
+	size_t			slen;
+	size_t			i;
+	size_t			j;
+
+	if (!s)
+		return (NULL);
+	slen = ft_strlen(s);
+	i = 0;
+	if (!len || !slen || start >= slen)
+	{
+		dst = (char *)malloc(sizeof(char));
+		dst[0] = '\0';
+		return (dst);
+	}
+	while (i < len && s[i + start] != '\0')
+		i++;
+	dst = (char *)malloc((i + 1));
+	if (!dst)
+		return (NULL);
+	j = 0;
+	while (j < i)
+		dst[j++] = s[start++];
+	dst[j] = '\0';
+	return (dst);
+}
+
+/**
  * count_words - counts the number of words in a string
  * @str: the string to count
  * @c: the delimiter
  * Return: the number of words
  */
-static	size_t	count_words(const char *str, char c)
+static	size_t	count_words(char *str, char c)
 {
 	size_t	i;
 	size_t	count;
@@ -31,7 +66,7 @@ static	size_t	count_words(const char *str, char c)
  * @c: the delimiter
  * Return: the array of words
  */
-char	**split(char const *s, char c)
+char	**split(char *s, char c)
 {
 	char	**split;
 	size_t	start;

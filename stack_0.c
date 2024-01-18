@@ -18,11 +18,11 @@ void malloc_error(void)
  * Return: nothing
 */
 
-void push(stack_t **stack, int n)
+void push(lstack_t **stack, int n)
 {
-	stack_t *new;
+	lstack_t *new;
 
-	new = malloc(sizeof(stack_t));
+	new = malloc(sizeof(lstack_t));
 	if (!new)
 		malloc_error();
 	new->n = n;
@@ -39,9 +39,9 @@ void push(stack_t **stack, int n)
  * Return: nothing
 */
 
-void print_stack(stack_t *stack)
+void print_stack(lstack_t *stack)
 {
-	stack_t *tmp = stack;
+	lstack_t *tmp = stack;
 
 	while (tmp)
 	{
@@ -56,9 +56,9 @@ void print_stack(stack_t *stack)
  * Return: returns nothing
 */
 
-void free_stack(stack_t *stack)
+void free_stack(lstack_t *stack)
 {
-	stack_t *tmp = stack;
+	lstack_t *tmp = stack;
 
 	while (tmp && tmp->next)
 	{
@@ -75,9 +75,9 @@ void free_stack(stack_t *stack)
  * Return: nothing
 */
 
-void pop(stack_t **stack)
+void pop(lstack_t **stack)
 {
-	stack_t *tmp;
+	lstack_t *tmp;
 
 	if (!*stack)
 		return;

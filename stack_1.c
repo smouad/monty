@@ -6,7 +6,7 @@
  * Return: nothing
 */
 
-void swap(stack_t **stack)
+void swap(lstack_t **stack)
 {
 	int tmp;
 
@@ -19,15 +19,15 @@ void swap(stack_t **stack)
 
 /**
  * add - add two elements of the stack
- * @stack_t: the stack
+ * @lstack_t: the stack
  * Return: nothing
 */
 
-void add(stack_t **stack_t)
+void add(lstack_t **lstack_t)
 {
 	int sum;
 
-	sum = (*stack_t)->n + (*stack_t)->next->n;
-	pop(stack_t);
-	(*stack_t)->n = sum;
+	sum = (*lstack_t)->n + (*lstack_t)->next->n;
+	pop(lstack_t);
+	(*lstack_t)->n = sum;
 }
