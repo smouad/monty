@@ -1,5 +1,10 @@
 #include "monty.h"
 
+/**
+ * get_first - gets the first line
+ * @stat: the static variable
+ * Return: the first line
+ */
 char	*get_first(char *stat)
 {
 	char	*line;
@@ -29,6 +34,11 @@ char	*get_first(char *stat)
 	return (line);
 }
 
+/**
+ * get_rest - gets the rest of the string
+ * @stat: the static variable
+ * Return: the rest of the string
+ */
 char	*get_rest(char *stat)
 {
 	int		j;
@@ -54,6 +64,12 @@ char	*get_rest(char *stat)
 	return (rest);
 }
 
+/**
+ * readfd - reads a file descriptor
+ * @fd: the file descriptor
+ * @stat: the static variable
+ * Return: the static variable
+ */
 char	*readfd(int fd, char *stat)
 {
 	int			reading_index;
@@ -79,6 +95,11 @@ char	*readfd(int fd, char *stat)
 	return (stat);
 }
 
+/**
+ * get_next_line - reads a file line by line
+ * @fd: the file descriptor
+ * Return: the line
+ */
 char	*get_next_line(int fd)
 {
 	char		*line;

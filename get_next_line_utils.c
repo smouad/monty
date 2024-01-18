@@ -1,5 +1,10 @@
 #include "monty.h"
 
+/**
+ * ft_strlen - gets the length of a string
+ * @str: the string
+ * Return: the length of the string
+ */
 int	ft_strlen(char *str)
 {
 	int	i;
@@ -10,12 +15,16 @@ int	ft_strlen(char *str)
 	return (i);
 }
 
+/**
+ * ft_str_join - joins two strings
+ * @s1: the first string
+ * @s2: the second string
+ * Return: the joined string
+ */
 char	*ft_strjoin(char *s1, char *s2)
 {
 	char	*str;
-	int		len;
-	int		i;
-	int		j;
+	int		len, i, j;
 
 	if (s1 == NULL)
 	{
@@ -38,6 +47,12 @@ char	*ft_strjoin(char *s1, char *s2)
 	return (str);
 }
 
+/**
+ * ft_strchr - checks if a string contains a character
+ * @str: the string
+ * @c: the character
+ * Return: 1 if the string contains the character, 0 otherwise
+ */
 int	ft_strchr(char *str, char c)
 {
 	int	i;
