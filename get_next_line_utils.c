@@ -16,7 +16,7 @@ int	ft_strlen(char *str)
 }
 
 /**
- * ft_str_join - joins two strings
+ * ft_strjoin - joins two strings
  * @s1: the first string
  * @s2: the second string
  * Return: the joined string
