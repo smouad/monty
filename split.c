@@ -1,10 +1,11 @@
 #include "monty.h"
 
 /**
- * ft_strcmp - compares two strings
- * @s1: the first string
- * @s2: the second string
- * Return: the difference between the strings
+ * ft_substr - gets a substring
+ * @s: the string
+ * @start: the start index
+ * @len: the length of the substring
+ * Return: the substring
  */
 char	*ft_substr(char *s, unsigned int start, size_t len)
 {
